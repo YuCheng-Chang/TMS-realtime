@@ -40,7 +40,7 @@ clear all; close all; path(pathdef); clc
 
 % switch to current directory and add relative path to phastimate toolbox
 cd(fileparts(getfield(matlab.desktop.editor.getActive, 'Filename')))
-addpath('../phastimate_code/')
+% addpath('../phastimate_code/')
 
 % circular statistics functions (simplified from circstat toolbox)
 ang_mean = @(x) angle(mean(exp(1i*x)));

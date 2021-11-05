@@ -28,7 +28,8 @@ disp('Resolving an EEG stream...');
 result = {}; 
 
 while isempty(result)
-    result = lsl_resolve_byprop(lib,'type','EEG');
+    result = lsl_resolve_byprop(lib,'type','EEG1');
+%     result = lsl_resolve_byprop(lib,'type','EEG');
 end
 
 disp('Opening an inlet...');
@@ -47,7 +48,8 @@ while 1
     if downsample == idx
         idx = 1;
         sample = sample + 1;
-        allvec(1,sample) = vec(5);
+        % allvec(1,sample) = vec(5);
+        allvec(1,sample) = vec(1);
         allts(1,sample) = ts;
         if mod(sample,window) == 0
             disp('sample: ')
