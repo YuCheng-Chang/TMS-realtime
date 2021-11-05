@@ -27,7 +27,7 @@ end
 for i=loc4
     targets(i)=4;
 end
-targets=remove_incorrect_phase();
+targets=remove_incorrect_phase(targets,peak_loc);
 end
 function targets=remove_incorrect_phase(targets,peak_loc)              
     for i=1:numel(peak_loc)-1
